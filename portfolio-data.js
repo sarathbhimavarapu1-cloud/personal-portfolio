@@ -57,9 +57,9 @@ const PORTFOLIO_DATA = {
 
   // ── Social Links ──────────────────────────────────────────
   socials: [
-    { platform: "GitHub",   url: "https://github.com/sarath",    icon: "github" },
-    { platform: "LinkedIn", url: "https://linkedin.com/in/sarath", icon: "linkedin" },
-    { platform: "LeetCode", url: "https://leetcode.com/sarath",   icon: "leetcode" },
+    { platform: "GitHub",   url: "https://github.com/sarathbhimavarapu1-cloud",                    icon: "github" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/sarath-bhimavarapu-06aba539a/", icon: "linkedin" },
+    { platform: "LeetCode", url: "https://leetcode.com/u/sarath/", icon: "leetcode" },
   ],
 
   // ── Skills ────────────────────────────────────────────────
@@ -99,7 +99,7 @@ const PORTFOLIO_DATA = {
       category: "backend",
       metrics: null,
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/sarathbhimavarapu1-cloud",
       featured: true,
     },
     {
@@ -113,7 +113,7 @@ const PORTFOLIO_DATA = {
       category: "backend",
       metrics: null,
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/sarathbhimavarapu1-cloud",
       featured: true,
     },
   ],
