@@ -48,8 +48,8 @@ const PORTFOLIO_DATA = {
 
   // ── Contact ───────────────────────────────────────────────
   contact: {
-    email: "sarathbhimavarapu2@gmail.com",
-    phone: "+91 90144 49669",
+    email: "sarath*********@gmail.com",
+    phone: "+91 90144*****",
     discord: "sarath#dev",
     location: "India",
     formTopics: ["Internship", "Full-time Role", "Freelance Project", "Just Saying Hi 👋"],
