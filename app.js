@@ -7,6 +7,7 @@
 
   const DATA = PORTFOLIO_DATA;
 
+
   // ── Helpers ─────────────────────────────────────────────────
   const $ = (sel) => document.querySelector(sel);
   const $$ = (sel) => document.querySelectorAll(sel);
@@ -143,6 +144,7 @@
     updateStatusUI();
     updateClock();
     setInterval(updateClock, 1000);
+
   }
 
   function setStatusMode(mode) {
@@ -151,6 +153,7 @@
       btn.classList.toggle("active", btn.dataset.mode === mode);
     });
     updateStatusUI();
+
   }
 
   function updateStatusUI() {
@@ -499,21 +502,36 @@
 
       if (valid) {
         const submitBtn = $("#submit-btn");
-        submitBtn.innerHTML = "<span>✅</span> Message Sent!";
+        const name    = $("#contact-name");
+        const email   = $("#contact-email");
+
+        // ── Loading state ──────────────────────────────────
+        submitBtn.innerHTML = "<span>⏳</span> Sending…";
         submitBtn.disabled = true;
         submitBtn.style.opacity = "0.7";
 
-        showToast("Message sent successfully! I'll get back to you soon.", "🎉");
+        const messageData = {
+          name:    name.value.trim(),
+          email:   email.value.trim(),
+          topic:   selectedTopic || "General",
+          message: msgTextarea.value.trim(),
+        };
 
+        // ── Simulate send (no backend) ─────────────────────
         setTimeout(() => {
-          form.reset();
-          charCount.textContent = "0";
-          $$(".topic-chip").forEach((c) => c.classList.remove("selected"));
-          selectedTopic = "";
-          submitBtn.innerHTML = '<span>🚀</span> Send Message';
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = "1";
-        }, 3000);
+          submitBtn.innerHTML = "<span>✅</span> Message Sent!";
+          showToast("Message sent! I'll get back to you soon.", "🎉");
+
+          setTimeout(() => {
+            form.reset();
+            charCount.textContent = "0";
+            $$(".topic-chip").forEach((c) => c.classList.remove("selected"));
+            selectedTopic = "";
+            submitBtn.innerHTML = '<span>🚀</span> Send Message';
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+          }, 3000);
+        }, 800);
       }
     });
 
@@ -564,6 +582,7 @@
   function init() {
     initTheme();
     initNavigation();
+
     initHero();
     initWorkingStatus();
     initAbout();

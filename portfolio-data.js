@@ -59,7 +59,7 @@ const PORTFOLIO_DATA = {
   socials: [
     { platform: "GitHub",   url: "https://github.com/sarathbhimavarapu1-cloud",                    icon: "github" },
     { platform: "LinkedIn", url: "https://www.linkedin.com/in/sarath-bhimavarapu-06aba539a/", icon: "linkedin" },
-    { platform: "LeetCode", url: "https://leetcode.com/u/sarath/", icon: "leetcode" },
+    { platform: "LeetCode", url: "https://leetcode.com/u/sarath1718/", icon: "leetcode" },
   ],
 
   // ── Skills ────────────────────────────────────────────────

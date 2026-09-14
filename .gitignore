@@ -2,3 +2,6 @@
 *.log
 .DS_Store
 Thumbs.db
+
+# Firebase — contains private API keys, never commit
+firebase-config.js
